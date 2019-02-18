@@ -15,3 +15,9 @@ If we launch with too much speed jumps a position.
 
 
 ![](https://media.giphy.com/media/2yuqQWOBZfcNMaiUhh/giphy.gif)
+
+
+In the top position has the effect rubber band.
+
+
+![](https://media.giphy.com/media/3JU3eVS0HtunUdR8Ko/giphy.gif)
