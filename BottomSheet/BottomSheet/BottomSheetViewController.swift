@@ -82,12 +82,14 @@ class BottomSheetViewController: UIViewController {
             let maxY = max(topY, lastY + dy)
             var y = min(bottomY, maxY)
 
-            if topY > lastY + dy && logConstraintValueForYPoisition(yPosition: lastY + dy) > 5 {
+            if topY > lastY + dy && logConstraintValueForYPoisition(yPosition: lastY + dy) > 0 && lastY + dy > 0 {
                 y = logConstraintValueForYPoisition(yPosition: lastY + dy)
 
                 bottomSheetDelegate?.updateBottomSheet(frame: self.initalFrame.offsetBy(dx: 0, dy: y))
             } else if topY < lastY + dy{
                 bottomSheetDelegate?.updateBottomSheet(frame: self.initalFrame.offsetBy(dx: 0, dy: y))
+            } else {
+                bottomSheetDelegate?.updateBottomSheet(frame: self.initalFrame.offsetBy(dx: 0, dy: 20))
             }
         
         case .failed, .ended, .cancelled:
